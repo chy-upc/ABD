@@ -28,7 +28,7 @@ Data could be got at [ACDC](https://github.com/HiLab-git/SSL4MIS/tree/master/dat
         └── val.list
 ```
 ## Pretrained Backbone
-[Swin-Unet](https://drive.google.com/drive/folders/1UC3XOoezeum0uck4KBVGa8osahs6rKUY)
+Download pre-trained [Swin-Unet](https://drive.google.com/drive/folders/1UC3XOoezeum0uck4KBVGa8osahs6rKUY) model to "./code/pretrained_ckpt" folder.
 ```
 ├── ./code/pretrained_ckpt
     └── swin_tiny_patch4_window7_224.pth
@@ -48,17 +48,7 @@ python ./code/test_PROMISE12.py  # for PROMISE12 testing
 ## Citation
 If you find these projects useful, please consider citing:
 ```bibtex
-@article{DBLP:journals/corr/abs-2305-00673,
-  author       = {Yunhao Bai and
-                  Duowen Chen and
-                  Qingli Li and
-                  Wei Shen and
-                  Yan Wang},
-  title        = {Bidirectional Copy-Paste for Semi-Supervised Medical Image Segmentation},
-  journal      = {CoRR},
-  volume       = {abs/2305.00673},
-  year         = {2023}
-}
+
 ```
 ## Acknowledgements
 Our code is largely based on [SSL4MIS](https://github.com/HiLab-git/SSL4MIS), [BCP](https://github.com/DeepMed-Lab-ECNU/BCP), and [SCP-Net](https://arxiv.org/pdf/2305.16214.pdf). Thanks for these authors for their valuable work, hope our work can also contribute to related research.
