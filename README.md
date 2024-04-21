@@ -31,7 +31,7 @@ Data could be got at [ACDC](https://github.com/HiLab-git/SSL4MIS/tree/master/dat
 [Swin-Unet](https://drive.google.com/drive/folders/1UC3XOoezeum0uck4KBVGa8osahs6rKUY)
 ```
 ├── ./code/pretrained_ckpt
-    ├── swin_tiny_patch4_window7_224.pth
+    └── swin_tiny_patch4_window7_224.pth
 ```
 ## Usage
 To train a model,
