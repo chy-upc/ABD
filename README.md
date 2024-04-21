@@ -1,2 +1,66 @@
-# Adaptive Bidirectional Displacement
-[CVPR2024] Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation
+# Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024)
+by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.
+## Introduction
+Official code for "[Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation]()". (CVPR 2024)
+## Requirements
+This repository is based on PyTorch 1.11.0, CUDA 11.3 and Python 3.7.13. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
+```
+conda create -n ABD python=3.7.13
+conda activate ABD
+pip install -r requirements.txt
+```
+## Dataset
+Data could be got at [ACDC](https://github.com/HiLab-git/SSL4MIS/tree/master/data/ACDC) and [promise12](https://promise12.grand-challenge.org/Download/).
+```
+├── ./data
+    ├── [ACDC]
+        ├── [data]
+        ├── test.list
+        ├── train_slices.list
+        ├── train.list
+        └── val.list
+    └── [promise12]
+        ├── CaseXX_segmentation.mhd
+        ├── CaseXX_segmentation.raw
+        ├── CaseXX.mhd
+        ├── CaseXX.raw
+        ├── test.list
+        └── val.list
+```
+## Pretrained Backbone
+[Swin-Unet](https://drive.google.com/drive/folders/1UC3XOoezeum0uck4KBVGa8osahs6rKUY)
+```
+├── ./code/pretrained_ckpt
+    ├── swin_tiny_patch4_window7_224.pth
+```
+## Usage
+To train a model,
+```
+python ./code/train_ACDC_Cross_Teaching.py  # for ACDC training —— *Ours*-ABD (Cross Teaching) 
+python ./code/train_ACDC_BCP.py  # for ACDC training —— *Ours*-ABD (BCP) 
+python ./code/train_PROMISE12.py  # for PROMISE12 training
+``` 
+To test a model,
+```
+python ./code/test_ACDC.py  # for ACDC testing
+python ./code/test_PROMISE12.py  # for PROMISE12 testing
+```
+## Citation
+If you find these projects useful, please consider citing:
+```bibtex
+@article{DBLP:journals/corr/abs-2305-00673,
+  author       = {Yunhao Bai and
+                  Duowen Chen and
+                  Qingli Li and
+                  Wei Shen and
+                  Yan Wang},
+  title        = {Bidirectional Copy-Paste for Semi-Supervised Medical Image Segmentation},
+  journal      = {CoRR},
+  volume       = {abs/2305.00673},
+  year         = {2023}
+}
+```
+## Acknowledgements
+Our code is largely based on [SSL4MIS](https://github.com/HiLab-git/SSL4MIS), [BCP](https://github.com/DeepMed-Lab-ECNU/BCP), and [SCP-Net](https://arxiv.org/pdf/2305.16214.pdf). Thanks for these authors for their valuable work, hope our work can also contribute to related research.
+## Questions
+If you have any questions, welcome contact me at 'chihanyang@s.upc.edu.cn'.
