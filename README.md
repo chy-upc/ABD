@@ -1,5 +1,6 @@
 # Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024)
 by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.
+![image](figure/framework.png)
 ## Introduction
 Official code for "[Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation]()". (CVPR 2024)
 ## Requirements
