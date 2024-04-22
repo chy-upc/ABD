@@ -2,7 +2,10 @@
 <b>by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.</b>
 ![image](figure/framework.png)
 [paper]() | [code](https://github.com/chyupc/ABD)
-## Requirements
+## Installation
+```bash
+git clone https://github.com/chy-upc/ABD.git
+```
 This repository is based on PyTorch 1.11.0, CUDA 11.3 and Python 3.7.13. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
 ```
 conda create -n ABD python=3.7.13
