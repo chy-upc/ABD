@@ -2,7 +2,6 @@
 <h1> Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024) </h1>
 </div>
 
-# Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024)
 <b>by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.</b>
 ![image](figure/framework.png)
 Consistency learning is a central strategy to tackle unlabeled data in semi-supervised medical image segmentation (SSMIS), which enforces the model to produce consistent
