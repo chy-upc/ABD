@@ -1,4 +1,13 @@
-‹center> # Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024) ‹/center>
+<div align="center">
+
+<h1> Improving the Generalization of Segmentation Foundation Model under Distribution Shift via Weakly Supervised Adaptation </h1>
+
+<a href='https://zhang-haojie.github.io/project-pages/wesam.html'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
+<a href='http://arxiv.org/abs/2312.03502'><img src='https://img.shields.io/badge/Technique-Report-red'></a> 
+
+</div>
+
+# Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024)
 <b>by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.</b>
 ![image](figure/framework.png)
 Consistency learning is a central strategy to tackle unlabeled data in semi-supervised medical image segmentation (SSMIS), which enforces the model to produce consistent
