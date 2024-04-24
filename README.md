@@ -1,10 +1,5 @@
 <div align="center">
-
 <h1> Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024) </h1>
-
-<a href='https://zhang-haojie.github.io/project-pages/wesam.html'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
-<a href='http://arxiv.org/abs/2312.03502'><img src='https://img.shields.io/badge/Technique-Report-red'></a> 
-
 </div>
 
 # Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024)
