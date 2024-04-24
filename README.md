@@ -4,9 +4,11 @@
 
 <b>by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.</b>
 ![image](figure/framework.png)
+
 Consistency learning is a central strategy to tackle unlabeled data in semi-supervised medical image segmentation (SSMIS), which enforces the model to produce consistent
 predictions under the perturbation. However, most current approaches solely focus on utilizing a specific single perturbation, which can only cope with limited cases, while
 employing multiple perturbations simultaneously is hard to guarantee the quality of consistency learning. In this paper, we propose an Adaptive Bidirectional Displacement (ABD) approach to solve the above challenge.
+
 [paper]() | [code](https://github.com/chyupc/ABD)
 ## Installation
 ```bash
