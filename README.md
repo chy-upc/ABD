@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1> Improving the Generalization of Segmentation Foundation Model under Distribution Shift via Weakly Supervised Adaptation </h1>
+<h1> Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024) </h1>
 
 <a href='https://zhang-haojie.github.io/project-pages/wesam.html'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
 <a href='http://arxiv.org/abs/2312.03502'><img src='https://img.shields.io/badge/Technique-Report-red'></a> 
@@ -10,8 +10,8 @@
 # Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024)
 <b>by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.</b>
 ![image](figure/framework.png)
-Consistency learning is a central strategy to tackle unlabeled data in semi-supervised medical image segmentation (SSMIS), which enforces the model to produce consistent
-predictions under the perturbation. However, most current approaches solely focus on utilizing a specific single perturbation, which can only cope with limited cases, while
+Consistency learning is a central strategy to tackle unlabeled data in semi-supervised medical image segmentation (SSMIS), which enforces the model to produce consistent
+predictions under the perturbation. However, most current approaches solely focus on utilizing a specific single perturbation, which can only cope with limited cases, while
 employing multiple perturbations simultaneously is hard to guarantee the quality of consistency learning. In this paper, we propose an Adaptive Bidirectional Displacement (ABD) approach to solve the above challenge.
 [paper]() | [code](https://github.com/chyupc/ABD)
 ## Installation
