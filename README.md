@@ -1,6 +1,7 @@
 <div align="center">
 <h1> Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation (CVPR 2024) </h1>
-[paper]() | [code](https://github.com/chyupc/ABD)
+<a href=''><img src='https://img.shields.io/badge/Project-Paper-green'></a> 
+<a href='https://github.com/chy-upc/ABD'><img src='https://img.shields.io/badge/Technique-Code-red'></a> 
 </div>
 
 <b>by Hanyang Chi, Jian Pang, Bingfeng Zhang, and Weifeng Liu.</b>
