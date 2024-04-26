@@ -10,7 +10,7 @@ Consistency learning is a central strategy to tackle unlabeled data in semi-supe
 predictions under the perturbation. However, most current approaches solely focus on utilizing a specific single perturbation, which can only cope with limited cases, while
 employing multiple perturbations simultaneously is hard to guarantee the quality of consistency learning. In this paper, we propose an Adaptive Bidirectional Displacement (ABD) approach to solve the above challenge.
 
-## Installation
+## 1. Installation
 ```bash
 git clone https://github.com/chy-upc/ABD.git
 ```
@@ -20,7 +20,7 @@ conda create -n ABD python=3.7.13
 conda activate ABD
 pip install -r requirements.txt
 ```
-## Dataset
+## 2. Dataset
 Data could be got at [ACDC](https://github.com/HiLab-git/SSL4MIS/tree/master/data/ACDC) and [promise12](https://promise12.grand-challenge.org/Download/).
 ```
 ├── ./data
@@ -38,13 +38,13 @@ Data could be got at [ACDC](https://github.com/HiLab-git/SSL4MIS/tree/master/dat
         ├── test.list
         └── val.list
 ```
-## Pretrained Backbone
+## 3. Pretrained Backbone
 Download pre-trained [Swin-Unet](https://drive.google.com/drive/folders/1UC3XOoezeum0uck4KBVGa8osahs6rKUY) model to "./code/pretrained_ckpt" folder.
 ```
 ├── ./code/pretrained_ckpt
     └── swin_tiny_patch4_window7_224.pth
 ```
-## Usage
+## 4. Usage
 To train a model,
 ```
 python ./code/train_ACDC_Cross_Teaching.py  # for ACDC training —— *Ours*-ABD (Cross Teaching) 
