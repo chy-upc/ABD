@@ -59,7 +59,12 @@ python ./code/test_PROMISE12.py  # for PROMISE12 testing
 ## Citation
 If you find these projects useful, please consider citing:
 ```bibtex
-
+@article{chi2024adaptive,
+  title={Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation},
+  author={Chi, Hanyang and Pang, Jian and Zhang, Bingfeng and Liu, Weifeng},
+  journal={arXiv preprint arXiv:2405.00378},
+  year={2024}
+}
 ```
 ## Acknowledgements
 Our code is largely based on [SSL4MIS](https://github.com/HiLab-git/SSL4MIS), [BCP](https://github.com/DeepMed-Lab-ECNU/BCP), and [SCP-Net](https://arxiv.org/pdf/2305.16214.pdf). Thanks for these authors for their valuable work, hope our work can also contribute to related research.
