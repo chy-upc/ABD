@@ -59,10 +59,11 @@ python ./code/test_PROMISE12.py  # for PROMISE12 testing
 ## Citation
 If you find these projects useful, please consider citing:
 ```bibtex
-@article{chi2024adaptive,
+@inproceedings{chi2024adaptive,
   title={Adaptive Bidirectional Displacement for Semi-Supervised Medical Image Segmentation},
   author={Chi, Hanyang and Pang, Jian and Zhang, Bingfeng and Liu, Weifeng},
-  journal={arXiv preprint arXiv:2405.00378},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={4070--4080},
   year={2024}
 }
 ```
