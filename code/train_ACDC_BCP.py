@@ -16,7 +16,7 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from tqdm import tqdm
 from skimage.measure import label
-from utils.displacement import ABD_I_BCP
+from utils.displacement import ABD_R_BCP
 from dataloaders.dataset import (BaseDataSets, TwoStreamBatchSampler, WeakStrongAugment)
 from networks.net_factory import BCP_net
 from utils import ramps, losses
@@ -410,8 +410,8 @@ def self_train(args ,pre_snapshot_path, snapshot_path):
             # Model1 & Model2 Cross Pseudo Supervision
             pseudo_supervision1 = dice_loss(out_soft_1, out_pseudo_2.unsqueeze(1))  
             pseudo_supervision2 = dice_loss(out_soft_2, out_pseudo_1.unsqueeze(1))  
-            # ABD-I New Training Sample
-            image_patch_last = ABD_I_BCP(out_max_1, out_max_2, net_input_1, net_input_2, out_1, out_2, args)
+            # ABD-R New Training Sample
+            image_patch_last = ABD_R_BCP(out_max_1, out_max_2, net_input_1, net_input_2, out_1, out_2, args)
             image_output_1 = model_1(image_patch_last.unsqueeze(1))  
             image_output_soft_1 = torch.softmax(image_output_1, dim=1)
             pseudo_image_output_1 = torch.argmax(image_output_soft_1.detach(), dim=1, keepdim=False)
