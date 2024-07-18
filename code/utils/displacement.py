@@ -2,8 +2,8 @@ import torch
 from einops import rearrange
 import random
 
-def ABD_I(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, outputs1_unlabel, outputs2_unlabel, args):
-    # ABD-I Bidirectional Displacement Patch
+def ABD_R(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, outputs1_unlabel, outputs2_unlabel, args):
+    # ABD-R Bidirectional Displacement Patch
     patches_1 = rearrange(outputs1_max[args.labeled_bs:], 'b (h p1) (w p2)->b (h w) (p1 p2)', p1=args.patch_size, p2=args.patch_size)
     patches_2 = rearrange(outputs2_max[args.labeled_bs:], 'b (h p1) (w p2)->b (h w) (p1 p2)', p1=args.patch_size, p2=args.patch_size)
     image_patch_1 = rearrange(volume_batch.squeeze(1)[args.labeled_bs:], 'b  (h p1) (w p2) -> b (h w)(p1 p2) ', p1=args.patch_size, p2=args.patch_size)  # torch.Size([8, 224, 224])
@@ -46,7 +46,7 @@ def ABD_I(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, outputs
     image_patch_last = rearrange(image_patch, 'b (h w)(p1 p2) -> b  (h p1) (w p2)', h=args.h_size, w=args.w_size,p1=args.patch_size, p2=args.patch_size) 
     return image_patch_last
 
-def ABD_I_BCP(out_max_1, out_max_2, net_input_1, net_input_2, out_1, out_2, args):
+def ABD_R_BCP(out_max_1, out_max_2, net_input_1, net_input_2, out_1, out_2, args):
     patches_1 = rearrange(out_max_1, 'b (h p1) (w p2)->b (h w) (p1 p2)', p1=args.patch_size, p2=args.patch_size)
     patches_2 = rearrange(out_max_2, 'b (h p1) (w p2)->b (h w) (p1 p2)', p1=args.patch_size, p2=args.patch_size)
     image_patch_1 = rearrange(net_input_1.squeeze(1), 'b  (h p1) (w p2) -> b (h w)(p1 p2) ',p1=args.patch_size, p2=args.patch_size)  # torch.Size([12, 224, 224])
@@ -103,8 +103,8 @@ def ABD_I_BCP(out_max_1, out_max_2, net_input_1, net_input_2, out_1, out_2, args
     image_patch_last = rearrange(image_patch, 'b (h w)(p1 p2) -> b  (h p1) (w p2)', h=args.h_size, w=args.w_size,p1=args.patch_size, p2=args.patch_size)  # torch.Size([24, 224, 224])
     return image_patch_last
 
-def ABD_R(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, label_batch, label_batch_strong, args):
-    # ABD-R Bidirectional Displacement Patch
+def ABD_I(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, label_batch, label_batch_strong, args):
+    # ABD-I Bidirectional Displacement Patch
     patches_supervised_1 = rearrange(outputs1_max[:args.labeled_bs], 'b (h p1) (w p2)->b (h w) (p1 p2)', p1=args.patch_size, p2=args.patch_size)
     patches_supervised_2 = rearrange(outputs2_max[:args.labeled_bs], 'b (h p1) (w p2)->b (h w) (p1 p2)', p1=args.patch_size, p2=args.patch_size)
     image_patch_supervised_1 = rearrange(volume_batch.squeeze(1)[:args.labeled_bs], 'b  (h p1) (w p2) -> b (h w)(p1 p2) ', p1=args.patch_size, p2=args.patch_size)  # torch.Size([8, 224, 224])
