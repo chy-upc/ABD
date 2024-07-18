@@ -177,15 +177,15 @@ def train(args, snapshot_path):
             outputs2_max = torch.max(outputs_soft2.detach(), dim=1)[0]
             pseudo_outputs2 = torch.argmax(outputs_soft2[args.labeled_bs:].detach(), dim=1, keepdim=False) 
             
-            # ABD-R New Training Sample
-            image_patch_supervised_last, label_patch_supervised_last = ABD_R(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, label_batch, label_batch_strong, args)
+            # ABD-I New Training Sample
+            image_patch_supervised_last, label_patch_supervised_last = ABD_I(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, label_batch, label_batch_strong, args)
             image_output_supervised_1 = model1(image_patch_supervised_last.unsqueeze(1))  
             image_output_soft_supervised_1 = torch.softmax(image_output_supervised_1, dim=1)
             image_output_supervised_2 = model2(image_patch_supervised_last.unsqueeze(1))
             image_output_soft_supervised_2 = torch.softmax(image_output_supervised_2, dim=1)
 
-            # ABD-I New Training Sample
-            image_patch_last = ABD_I(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, outputs1_unlabel, outputs2_unlabel, args)
+            # ABD-R New Training Sample
+            image_patch_last = ABD_R(outputs1_max, outputs2_max, volume_batch, volume_batch_strong, outputs1_unlabel, outputs2_unlabel, args)
             image_output_1 = model1(image_patch_last.unsqueeze(1))
             image_output_soft_1 = torch.softmax(image_output_1, dim=1)
             pseudo_image_output_1 = torch.argmax(image_output_soft_1.detach(), dim=1, keepdim=False)
