@@ -165,6 +165,14 @@ class DiceLoss(nn.Module):
             tensor_list.append(temp_prob)
         output_tensor = torch.cat(tensor_list, dim=1)
         return output_tensor.float()
+        
+    def _one_hot_mask_encoder(self, input_tensor):
+        tensor_list = []
+        for i in range(self.n_classes):
+            temp_prob = input_tensor * i == i * torch.ones_like(input_tensor)
+            tensor_list.append(temp_prob)
+        output_tensor = torch.cat(tensor_list, dim=1)
+        return output_tensor.float()
 
     def _dice_loss(self, score, target):
         target = target.float()
