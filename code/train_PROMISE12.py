@@ -45,7 +45,7 @@ parser.add_argument('--deterministic', type=int, default=1,
                     help='whether use deterministic training')
 parser.add_argument('--base_lr', type=float, default=0.01,
                     help='segmentation network learning rate')
-parser.add_argument('--image_size', type=list, default=[256, 256],
+parser.add_argument('--image_size', type=list, default=[224, 224],
                     help='patch size of network input')
 parser.add_argument('--seed', type=int, default=1337, help='random seed')
 parser.add_argument('--num_classes', type=int, default=2,
@@ -133,8 +133,8 @@ def train(args, snapshot_path):
     def worker_init_fn(worker_id):
         random.seed(args.seed + worker_id)
 
-    db_train = Promise12("/data/chy_data/ABD-main/data/promise12", mode='train', out_size=256)
-    db_val = Promise12("/data/chy_data/ABD-main/data/promise12", mode='val', out_size=256)
+    db_train = Promise12("/data/chy_data/ABD-main/data/promise12", mode='train', out_size=224)
+    db_val = Promise12("/data/chy_data/ABD-main/data/promise12", mode='val', out_size=224)
 
     total_slices = len(db_train)
     labeled_slice = 202  # args.labeled_num=7
