@@ -106,7 +106,7 @@ def Inference_model1(FLAGS):
     test_save_path = "/data/chy_data/ABD-main/model/Cross_Teaching/ACDC_{}_{}/{}_predictions_model/".format(FLAGS.exp, FLAGS.labeled_num, FLAGS.model_1)
     if not os.path.exists(test_save_path):
         os.makedirs(test_save_path)
-    net = net_factory(net_type=FLAGS.model, in_chns=1,class_num=FLAGS.num_classes)
+    net = net_factory(net_type=FLAGS.model_1, in_chns=1,class_num=FLAGS.num_classes)
     save_mode_path = os.path.join(snapshot_path, '{}_best_model.pth'.format(FLAGS.model_1))
     net.load_state_dict(torch.load(save_mode_path))
     print("init weight from {}".format(save_mode_path))
