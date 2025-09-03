@@ -21,7 +21,7 @@ conda activate ABD
 pip install -r requirements.txt
 ```
 ## 2. Dataset
-Data could be got at [ACDC](https://github.com/HiLab-git/SSL4MIS/tree/master/data/ACDC) and [promise12](https://promise12.grand-challenge.org/Download/). \\
+Data could be got at [ACDC](https://github.com/HiLab-git/SSL4MIS/tree/master/data/ACDC) and [promise12](https://promise12.grand-challenge.org/Download/).  
 For the PROMISE12 dataset, we also provide the pre-processed version at [Google Drive](https://drive.google.com/file/d/1KRzKemoFYxQN26d2eZf3wkm6_8Zf84JD/view?usp=drive_link).
 ```
 ├── ./data
